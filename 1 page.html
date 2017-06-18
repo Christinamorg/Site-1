@@ -1,11 +1,29 @@
 <!doctype html>
+
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="1 page.css" /> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
+
+	
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Christina's World</title>
+
 </head>
 
 <body>
+
 <div id="nav">
      <ul>
          <li><a href="#about">About</a></li>
@@ -15,17 +33,17 @@
      
      <div id="page1">
   <a id="about" class="smooth"></a>
-    About page content goes here.
+    Christina Morgeneier specializes in JavaScript, CSS, and HTMl.
 </div>
  
 <div id="page2">
   <a id="portfolio" class="smooth"></a>
-    Portfolio page content goes here.
+    She has strong working knowledge.
 </div>
  
 <div id="page3">
   <a id="contact" class="smooth"></a>
-    Contact page content goes here.
+    Contact Christina for job opportunities and to learn more.
 </div>
 </div>
 </body>
